@@ -51,7 +51,7 @@ class AuthorTemplate extends React.Component {
     const { author, cover } = this.props.pathContext;
     const postEdges =
       this.props.data.allMarkdownRemark &&
-      this.props.data.allMarkdownRemark.edges
+        this.props.data.allMarkdownRemark.edges
         ? this.props.data.allMarkdownRemark.edges
         : [];
     const authorsEdges =

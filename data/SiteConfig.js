@@ -1,7 +1,7 @@
 module.exports = {
   blogPostDir: "sample-posts", // The name of directory that contains your posts.
   blogAuthorDir: "sample-authors", // The name of directory that contains your 'authors' folder.
-  blogAuthorId: "casper", // The default and fallback author ID used for blog posts without a defined author.
+  blogAuthorId: "randy", // The default and fallback author ID used for blog posts without a defined author.
   siteTitle: "Gatsby Casper Starter", // Site title.
   siteTitleAlt: "GatsbyJS Casper Theme Starter", // Alternative site title for SEO.
   siteLogo:
@@ -11,7 +11,7 @@ module.exports = {
   siteDescription:
     "A Casper themed GatsbyJS stater based on the Advanced Starter.", // Website description used for RSS feeds/meta description tag.
   siteCover:
-    "https://haysclark.github.io/gatsby-starter-casper/images/blog-cover.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
+    "/images/cover_randy.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssAuthor: "Casper User", // The author name used in the RSS file
