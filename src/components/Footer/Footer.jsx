@@ -8,7 +8,7 @@ class Footer extends Component {
       if (show) {
         return (
           <section className="poweredby">
-            Proudly published with <a href="https://gatsbyjs.org">Gatsby</a>
+            Powered by <a href="https://gatsbyjs.org">Gatsby</a> and <a href="https://github.com/haysclark/gatsby-starter-casper">Casper React</a>
           </section>
         );
       }
