@@ -6,19 +6,19 @@ module.exports = {
   siteTitleAlt: "Site about hobby documentation", // Alternative site title for SEO.
   siteLogo:
     "/logos/logo-1024.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
-  siteUrl: "randyarba.me", // Domain of your website without pathPrefix.
-  pathPrefix: "/gatsby-starter-casper", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
+  siteUrl: "https://www.randyarba.me", // Domain of your website without pathPrefix.
+  pathPrefix: "/myjourney", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
     "This is about my life journey write on markdown that contain code, android, literacy, dll", // Website description used for RSS feeds/meta description tag.
   siteCover:
     "/images/cover_randy.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
-  // siteRssAuthor: "Casper User", // The author name used in the RSS file
+  siteRssAuthor: "randy", // The author name used in the RSS file
   // siteFBAppID: "1825356251115265", // optional, sets the FB Application ID for using app insights
   sitePaginationLimit: 10, // The max number of posts per page.
   // googleAnalyticsID: "UA-111982167-1", // GA tracking ID.
-  // disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // enables Disqus comments, visually deviates from original Casper theme.
+  disqusShortname: "randyarba-me", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
     "https://github.com/Leviaran",
     "https://twitter.com/RandyArba",
