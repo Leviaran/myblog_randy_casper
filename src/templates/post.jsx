@@ -85,11 +85,12 @@ class PostTemplate extends React.Component {
     const getPrevData = () => (prev ? formatReadNext(data.prev) : null);
     const postPathPrefixIndex = config.pathPrefix ? location.pathname.indexOf(config.pathPrefix) : 0;
     const postPath = location.pathname.substring(postPathPrefixIndex, location.pathname.length);
+    const { id, name, image, bio, url } = authorData
 
     return (
       <Drawer className="post-template" isOpen={this.state.menuOpen}>
         <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>        
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
 
