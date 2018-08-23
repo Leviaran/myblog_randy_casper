@@ -89,8 +89,10 @@ class PostTemplate extends React.Component {
 
     return (
       <Drawer className="post-template" isOpen={this.state.menuOpen}>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>        
+        <Helmet>        
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+          <meta name="coba" content="Helmet application" />
+
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
 
