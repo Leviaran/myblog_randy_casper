@@ -41,7 +41,7 @@ div.page-template .post-title {
 
 .post-template .post-title,
 .page-template .post-title {
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 
 .post-excerpt p {
