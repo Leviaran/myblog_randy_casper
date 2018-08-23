@@ -109,7 +109,7 @@ class PostTemplate extends React.Component {
           <MainContent>
             <PostFormatting className={className}>
               <PostHeader>
-                <h1 className="post-title">{title}</h1>              
+                <h1 className="post-title">{title}</h1>
                 <section className="post-meta">
                   <PostDate date={date} />
                   <PostTags prefix=" on " tags={tags} />
