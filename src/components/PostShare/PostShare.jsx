@@ -17,7 +17,7 @@ class PostShare extends React.Component {
   render() {
     const { postNode, postPath, config } = this.props;
     const post = postNode.frontmatter;
-    const url = formatSiteUrl(config.siteUrl, config.pathPrefix, postPath);
+    const url = formatSiteUrl(config.siteUrl,"", postPath);
 
     const {
       FacebookShareButton,
