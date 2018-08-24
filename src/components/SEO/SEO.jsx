@@ -9,6 +9,7 @@ class SEO extends Component {
     let description;
     let image;
     let postURL;
+    let author;
     if (postSEO) {
       const postMeta = postNode.frontmatter;
       title = postMeta.title;
@@ -16,11 +17,13 @@ class SEO extends Component {
         ? postMeta.description
         : postNode.excerpt;
       image = postMeta.cover;
+      author = postMeta.author
       postURL = config.siteUrl + config.pathPrefix + postPath;
     } else {
       title = config.siteTitle;
       description = config.siteDescription;
       image = config.siteLogo;
+      author = "randy"
     }
     const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
     image = config.siteUrl + realPrefix + image;
@@ -71,6 +74,7 @@ class SEO extends Component {
         {/* General tags */}
         <meta name="description" content={description} />
         <meta name="image" content={image} />
+        <meta name="author" content={author} />
 
         {/* Schema.org tags */}
         <script type="application/ld+json">

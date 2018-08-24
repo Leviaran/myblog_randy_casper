@@ -58,7 +58,7 @@ class IndexTemplate extends React.Component {
 
     return (
       <Drawer className="home-template" isOpen={this.state.menuOpen}>
-        <Helmet title={config.siteTitle} />
+        <Helmet title={config.siteTitle}/>
         <SEO postEdges={nodes} />
 
         {/* The blog navigation links */}
