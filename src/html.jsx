@@ -28,8 +28,7 @@ export default class HTML extends React.Component {
     }
     return (
       <html lang="en">
-        <head>
-          <meta name="image" property="og:image" content="https://www.randyarba.me" />
+        <head>          
           <meta name="author" content="Randy arba" />
           <meta charSet="utf-8" />
           <meta

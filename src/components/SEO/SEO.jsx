@@ -73,8 +73,8 @@ class SEO extends Component {
       <Helmet>
         {/* General tags */}
         <meta name="description" content={description} />
-        <meta name="image" content={image} />
-        <meta name="author" content={author} />
+        <meta name="image" property="og:image"  content={image} />
+        <meta name="author" content={author} />        
 
         {/* Schema.org tags */}
         <script type="application/ld+json">
