@@ -10,7 +10,8 @@ module.exports = {
       site_url: config.siteUrl + pathPrefix,
       feed_url: config.siteUrl + pathPrefix + config.siteRss,
       title: config.siteTitle,
-      description: config.siteDescription,      
+      image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
+      description: config.siteDescription,
       author: config.siteRssAuthor,
       copyright: `${config.copyright.label} © ${config.copyright.year ||
         new Date().getFullYear()}`
