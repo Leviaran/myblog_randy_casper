@@ -3,13 +3,11 @@ title: "Manajemen Dependensi Menggunakan Kotlin"
 category: "android"
 author: "randy"
 date: "2018-08-23"
-cover: ""
+cover: "/images/kotlin_gradle/gradle-kotlin.png"
 tags:
     - anko
     - android
 ---
-
-![](./assets/gradle-kotlin.png)
 
 **Background**
 
