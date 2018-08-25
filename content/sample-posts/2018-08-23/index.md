@@ -30,7 +30,7 @@ Cukup sederhana bukan? Masalahnya tidak cukup sampai disitu, masalah lainnya ada
 
 
 
-**Kotlin DSL dan Gradle**
+**Kotlin DSL == AutoComplete** 
 
 Well, Kotlin DSL merupakan singkatan dari Kotlin Domain Spesific Language, singkatnya kamu akan menulis kode jadi lebih mudah dan enak dibaca. Sebelum kita beranjak lebih jauh kita harus mengetahui alur logika Gradle ketika *load* semua dependencies. berdasarkan dokumentasi resmi dari laman [Gradle](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources) 
 
@@ -44,11 +44,11 @@ Sekarang pilih **projek view** untuk melihat semua folder yang ada dalam projek 
 
 klik kanan pada nama project kamu lalu pilih **New -> Directory** 
 
-![buildSrc](/assets/2.png)
+![buildSrc](./assets/2.png)
 
 kemudian beri nama **buildSrc**, hasil jadinya seperti gambar berikut:
 
-![hasil buildSrc](/assets/3.png)
+![hasil buildSrc](./assets/3.png)
 
 Lalu klik kanan lagi pada folder buildSrc tersebut, buat satu buah file baru dengan ektensi kts. **New -> File** beri nama file tersebut dengan **build.gradle.kts**. Isi file tersebut dengan kode berikut, lalu setelah selesai kemudian klik reload dependencies
 
@@ -62,11 +62,11 @@ plugins {
 
 
 
-![](/assets/4.png)
+![](./assets/4.png)
 
 Buat direktori baru (src/main/java) pada buildSrc yang didalamnya memiliki file Dependencies.kt. klik kanan pada **buildSrc**  klik **New -> Directory** isi Directori dengan **src/main/java** lalu klik kanan lagi pada folder java untuk membuat satu file dengan nama Dependencies.kt. Struktur folder/package adalah sebagai berikut,
 
-![](/assets/5.png)
+![](./assets/5.png)
 
 
 
@@ -125,7 +125,7 @@ object Deps {
 
 Semua kebutuhan untuk manajemen sudah cukup, sekarang kita akan beralih pada file lain, yakni file Build.gradle pada level App module. Buka build.gradle dan update beberapa kode, coba Anda ketik sendiri lalu lihat apa yang terjadi.
 
-![](/assets/6.png)
+![](./assets/6.png)
 
 
 
@@ -133,7 +133,7 @@ Perlu diketahui sebaiknya Anda me-refresh atau sync gradle terlebih dahulu untuk
 
 hasil akhir struktur package pada android view adalah sebagai berikut,
 
-![](/assets/7.png)
+![](./assets/7.png)
 
 
 
