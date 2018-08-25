@@ -16,8 +16,8 @@ module.exports = {
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssAuthor: "randy", // The author name used in the RSS file
   // siteFBAppID: "1825356251115265", // optional, sets the FB Application ID for using app insights
-  sitePaginationLimit: 10, // The max number of posts per page.
-  // googleAnalyticsID: "UA-111982167-1", // GA tracking ID.
+  sitePaginationLimit: 5, // The max number of posts per page.
+  googleAnalyticsID: "UA-124570614-1", // GA tracking ID.
   disqusShortname: "randyarba-me", // enables Disqus comments, visually deviates from original Casper theme.
   siteSocialUrls: [
     "https://github.com/Leviaran",
