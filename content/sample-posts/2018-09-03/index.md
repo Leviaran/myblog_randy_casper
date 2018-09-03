@@ -3,7 +3,7 @@ title: "Meningkatkan Performa Kotlin dengan Inline Class"
 category: "android"
 author: "randy"
 date: "2018-09-03"
-cover: "/images/kotlin_inline_class/Kotlin_inline_class.jpg"
+cover: "/images/kotlin_inline_class/kotlin_inline_class.jpg"
 tags:
     - kotlin
     - android
