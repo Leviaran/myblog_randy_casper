@@ -9,7 +9,7 @@ module.exports = {
   siteUrl: "https://www.randyarba.me", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
-    "This is about my life journey write on markdown that contain code, android, literacy, dll", // Website description used for RSS feeds/meta description tag.
+    "This is about my life journey write on markdown that contain code, android, literacy, etc.", // Website description used for RSS feeds/meta description tag.
   siteCover:
     "/images/cover_randy.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
