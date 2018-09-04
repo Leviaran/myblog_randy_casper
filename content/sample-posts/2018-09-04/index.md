@@ -1,5 +1,5 @@
 ---
-title: "Lazy Delegate kotlin"
+title: "Lazy Delegate Kotlin"
 category: "android"
 author: "randy"
 date: "2018-09-04"
@@ -9,7 +9,7 @@ tags:
     - android
 ---
 
-Lazy merupakan fungsi yang menerima lambda dan mengembalikan sebuah Instance sebagai delegasi property. Properti atribut lazy kotlin digunakan untuk mendeklarasikan nilai properti saat pertama kali dijalankan. Hal ini tentu berguna jika kita memperoleh kondisi dimana resource yang mahal untuk memperoleh sebuah data. Sebagai contoh, apabila Anda ingin mendeklarasikan nilai pada objek user, dimana dibutuhkan untuk pemanggilan microservice yang hanya sekali saja dipergunakan. Kamu harus selalu melakukan atau memasukkan nilai pada objek user apabila ingin menjalankannya, seharusnya Anda cukup melakukan deklarasi ketika Anda memperoleh data pertama kali. 
+Lazy Delegate merupakan fungsi yang menerima lambda dan mengembalikan sebuah *Instance* sebagai *delegasi property*. Properti atribut lazy kotlin digunakan untuk mendeklarasikan nilai properti saat pertama kali dijalankan. Hal ini tentu berguna jika kita berada pada kondisi dimana memperoleh data dengan resource yang mahal. Sebagai contoh, apabila Anda ingin mendeklarasikan nilai pada objek user, dimana dibutuhkan untuk pemanggilan microservice yang hanya sekali saja dipergunakan. Kebanyakan selalu memasukkan nilai pada objek user secara langsung dan ini dilakukan berulang nantinya, seharusnya Anda cukup melakukan deklarasi ketika Anda memperoleh data pertama kali. 
 
 Kita akan membuat sebagian contoh, semisal Anda memanggil service pada suatu objek pada kelas, biasanya kita akan menggunakan konstruktor dimana konstruktor merupakan fungsi pertama kali dijalan saat pembuatan objek. 
 
@@ -48,7 +48,7 @@ fun main(args : Array<String>) {
 }
 ```
 
-Contoh kedua pada baris kode tersebut tentu tidak efektif dan efisien, mengingat jenis property yang digunakan pada "name" bersifat mutable artinya data dapat berubah-ubah sehingga mengurangi performa dari pada penggunaan val(immutable). Parahnya apabila kita tidak mendefinisikan atau mengimplementasi fungsi access maka println tidak memperoleh data apa-apa hanya data kosong. 
+Contoh kedua pada baris kode tersebut tentu tidak efektif dan efisien, mengingat jenis property yang digunakan pada "name" bersifat mutable artinya data dapat berubah-ubah sehingga mengurangi performa dari pada penggunaan val(immutable). Parahnya apabila kita tidak mendefinisikan atau mengimplementasi fungsi access maka `println` tidak memperoleh data apa-apa hanya data kosong. 
 
 Solusinya adalah dengan menggunakan Lazy property, penggunaan lazy property jelas lebih baik dari hasil contoh yang telah saya berikan diatas, clean code dan tentunya efektif dan efisien. 
 
@@ -66,18 +66,18 @@ fun main(args : Array<String>){
 }
 ```
 
-Sekilas ketika kita mengimplementasikan lazy diatas kita akan teringat dengan aslah satu pembuatan variabel yang dideklarasikan nanti sehingga mampu menghindari null. ya betul, jawabannya adalah penggunaan `lateinit`. kedua properti tersebut bisa digunakan untuk menghindari pembuatan property di konstruktor.
+Sekilas ketika kita mengimplementasikan lazy diatas kita akan teringat dengan salah satu pembuatan variabel yang dideklarasikan nanti, sehingga mampu menghindari null. ya betul, jawabannya adalah penggunaan `lateinit`. Kedua properti tersebut bisa digunakan untuk menghindari pembuatan property di konstruktor. 
 
 
 
 **Lateinit**
 
-lateinit merupakan akronim dari late initialization atau dalam bahasa indonesia bisa diartikan sebagai di-inisiasi nanti. Biasanya lateinit ini digunakan saat kita tidak bisa memasukkan nilai secara langsung, melainkan hanya menampung terlebih dahulu yang nantinya bisa diisi null atau nonnull. Nah, kotlin tidak memperbolehkan membuat property yang nantinya menimbulkan Null Pointer Exception(NPE) apabila field property tidak berisi apa, meski kita bisa saja menggunakan variabel biasa dengan menambahkan questionmark misal `var user : String? = null` namun ini juga tidak disarankan kadang kita harus menambahkan questionmark secara berkelanjutan untuk memastikan field property tersebut tidak null apalagi bila chaining seperti `user?.atribut?.name?. . . .` tentunya menyebalkan bukan? Nah lateinit berguna untuk mengatasi hal tersebut, lateinit memperbolehkan nilai yang belum diisi tanpa embel-embel questionmark `lateinit var user : String`. Tetapi ingat property lateinit ini bukan berarti null tetapi non-null yang harus diisi nanti dan tentunya lateinit tidak mengizinkan tipe data primitif.
+Lateinit merupakan akronim dari *late initialization* atau dalam bahasa indonesia bisa diartikan sebagai di-inisiasi nanti. Biasanya lateinit ini digunakan saat kita tidak bisa memasukkan nilai secara langsung, melainkan hanya menampung terlebih dahulu yang nantinya bisa diisi null atau non-null. Nah, kotlin tidak memperbolehkan membuat properti yang nantinya menimbulkan Null Pointer Exception(NPE) apabila field properti tidak berisi apa-apa, meski kita bisa saja menggunakan variabel biasa dengan menambahkan *questionmark* misal `var user : String? = null` namun ini juga tidak disarankan kadang kita harus menambahkan *questionmark* secara berkelanjutan untuk memastikan field property tersebut tidak null apalagi bila chaining seperti `user?.atribut?.name?. . . .` atau memaksakan non-null assertion operator (`!!`) tentunya menyebalkan bukan? Nah lateinit berguna untuk mengatasi hal tersebut, lateinit memperbolehkan nilai yang belum diisi tanpa embel-embel *questionmark* `lateinit var user : String`. Tetapi ingat properti lateinit ini bukan berarti null tetapi non-null yang harus diisi nanti dan tentunya lateinit tidak mengizinkan tipe data primitif.
 
 Lalu kapan lateinit dan lazy kita dapat gunakan?
 
-- lazy hanya dapat diimpelementasikan atau digunakan untuk property yang bersifat immutable yakni penggunaan `val`. Sebaliknya lateinit hanya menerima property yang bersifat mutable atau `var`. Karena lateinit tidak dapat dikompile ke dalam final.
-- lateinit dapat di-initialize dari manapun asal sesuai dengan scope objeknya. Gunakan lateinit apabila Anda ingin menginisiasi dengan nilai yang belum pasti yang ada di luar fungsi.
+- lazy hanya dapat diimpelementasikan atau digunakan untuk property yang bersifat immutable yakni penggunaan `val`, Misal ketika memperoleh respond dari API. Sebaliknya lateinit hanya menerima property yang bersifat mutable atau `var`. Karena lateinit tidak dapat dikompile ke dalam final.
+- lateinit dapat di-*initialize* dari manapun asal sesuai dengan *scope* objeknya. Gunakan lateinit apabila Anda ingin menginisiasi dengan nilai yang belum pasti yang ada di luar fungsi.
 
  
 
